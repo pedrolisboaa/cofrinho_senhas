@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block titulo %}
+🐷Cofrinho Senhas🐷
+{% endblock titulo %}
+
+{% block conteudo %}
+    <div class="container">
+        <h2 class="titulo_index">O melhor cofre de senha do meu mundo!</h2>
+        <p class="texto_index">Oque deseja?</p>
+        <ul class="opcoes_index">
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'cadastro' %}">Cadastro</a></li>
+        </ul>
+    </div>
+{% endblock conteudo %}

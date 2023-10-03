@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+    🐷Login - Cofrinho🐷
+{% endblock titulo %}
+
+
+
+{% block conteudo %}
+    <div class="container">
+        <h1>Login - Cofrinho</h1>
+        <p>ou <a href="{% url 'cadastro' %}">fazer cadastro!</a></p>
+    </div>
+
+    <div class="container">
+        <form action="{% url 'login' %}" method="POST" class="formulario">
+            {% csrf_token %}
+            <input type="email" name="email" id="email" placeholder="E-mail" autofocus required>
+            <input type="password" name="senha" id="senha" placeholder="Super Senha" required>
+            <input type="submit" value="Acessar seu cofrinho!">
+        </form>
+    </div>
+
+{% endblock conteudo %}

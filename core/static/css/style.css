@@ -1,0 +1,110 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f5f9; /* Azul claro para o fundo */
+    color: #333; /* Cor do texto principal */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.cabecalho_main {
+    background-color: #3498db; /* Azul médio para o cabeçalho */
+    padding: 20px;
+}
+
+.cabecalho_main h1 {
+    font-size: 24px;
+    color: #fff; /* Cor do texto do cabeçalho */
+}
+
+.main {
+    padding: 20px;
+}
+
+.container {
+    background-color: #fff; /* Fundo branco para o container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centraliza o conteúdo dentro do container horizontalmente */
+    margin: 0 auto; /* Centraliza o container horizontalmente na página */
+    max-width: 400px; /* Define a largura máxima do container */
+    margin-top: 20px; /* Adiciona um espaço entre os containers */
+}
+
+.titulo_index {
+    font-size: 28px;
+    color: #3498db; /* Azul médio para o título */
+}
+
+.texto_index {
+    font-size: 18px;
+}
+
+.opcoes_index {
+    list-style-type: none;
+    padding: 0;
+}
+
+.opcoes_index li {
+    margin-bottom: 10px;
+}
+
+.opcoes_index a {
+    display: inline-block;
+    background-color: #3498db; /* Azul médio para os botões */
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.opcoes_index a:hover {
+    background-color: #2187c4; /* Azul escuro ao passar o mouse */
+}
+
+.rodape {
+    background-color: #3498db; /* Azul médio para o rodapé */
+    padding: 10px 0;
+    color: #fff;
+    margin-top: auto;
+}
+
+.formulario {
+    text-align: center; /* Centraliza os elementos do formulário horizontalmente */
+}
+
+.formulario input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.formulario input[type="submit"] {
+    background-color: #3498db; /* Cor de fundo do botão de envio */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #2187c4; /* Cor de destaque ao passar o mouse */
+}
+
+/* Estilos para o link "fazer login" */
+.container p a {
+    color: #3498db; /* Cor do link */
+    text-decoration: none;
+}
+
+.container p a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}

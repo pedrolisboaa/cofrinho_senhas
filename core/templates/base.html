@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}{% endblock titulo %}</title>
+        
+    <!--CSS-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header class="cabecalho_main">
+        <a href="{% url 'index' %}"><h1>Porquinho Senhas</h1></a>
+    </header>
+
+    <main class="main">
+        {% block conteudo %}
+        
+        {% endblock conteudo %}
+    </main>
+
+    <footer class="rodape">
+        &copy; 2023 Cofrinho
+    </footer>
+</body>
+</html>
