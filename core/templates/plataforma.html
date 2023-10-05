@@ -8,4 +8,10 @@
 
     <h1>Estou logado na plataforma.</h1>
 
+    <ul>
+        {% for dado in dados_do_usuario %}
+            <li>Site: {{dado.site}} - Senha: {{dado.senha}}</li>
+        {% endfor %}
+    </ul>
+
 {% endblock conteudo %}

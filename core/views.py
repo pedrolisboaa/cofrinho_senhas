@@ -5,6 +5,7 @@ from django.contrib.auth import login as login_django
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .util import gerador_de_senha
+from .models import Cofre
 
 
 # Create your views here.
@@ -65,7 +66,12 @@ def login(request):
 
 @login_required(login_url='login')
 def plataforma(request):
-    return render(request, 'plataforma.html')
+    dados_do_usuario = Cofre.objects.filter(usuario=request.user)
+    
+    contexto = {
+        'dados_do_usuario': dados_do_usuario,
+    }
+    return render(request, 'plataforma.html', contexto)
 
 
 def gera_senha(request):

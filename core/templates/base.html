@@ -17,6 +17,12 @@
     <header class="cabecalho_main">
         <a href="{% url 'index' %}"><h1>Porquinho Senhas <i class="fa-solid fa-piggy-bank"></i></h1></a>
         <a href="{% url 'gera_senha' %}"><h2>Gerador de Senha <i class="fa-solid fa-key"></i></h2></a>
+        {% if user.is_authenticated %}
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+        </form>
+    {% endif %}
     </header>
 
     <main class="main">
@@ -24,6 +30,10 @@
         
         {% endblock conteudo %}
     </main>
+
+   
+      
+   
 
     <footer class="rodape">
         &copy; 2023 Cofrinho
