@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate
 from django.contrib.auth import login as login_django
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from .util import gerador_de_senha
 
 
 # Create your views here.
@@ -65,3 +66,21 @@ def login(request):
 @login_required(login_url='login')
 def plataforma(request):
     return render(request, 'plataforma.html')
+
+
+def gera_senha(request):
+    if request.method == 'POST':
+        numero_str = request.POST.get('numero')
+        caracteres_str = request.POST.get('caracteres')
+        letras_str = request.POST.get('letras')
+
+        if numero_str and caracteres_str and letras_str:
+            numero = int(numero_str)
+            caracteres = int(caracteres_str)
+            letras = int(letras_str)
+            
+            senha = gerador_de_senha(caracteres, numero, letras)
+            messages.success(request, f'{senha}')
+            
+
+    return render(request, 'gera_senha.html')

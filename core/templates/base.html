@@ -6,13 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block titulo %}{% endblock titulo %}</title>
+
+    <!--FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/c59ca1806e.js" crossorigin="anonymous"></script>
         
     <!--CSS-->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <header class="cabecalho_main">
-        <a href="{% url 'index' %}"><h1>Porquinho Senhas</h1></a>
+        <a href="{% url 'index' %}"><h1>Porquinho Senhas <i class="fa-solid fa-piggy-bank"></i></h1></a>
+        <a href="{% url 'gera_senha' %}"><h2>Gerador de Senha <i class="fa-solid fa-key"></i></h2></a>
     </header>
 
     <main class="main">

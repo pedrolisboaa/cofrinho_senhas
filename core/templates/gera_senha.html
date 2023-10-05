@@ -3,3 +3,28 @@
 {% block titulo %}
     🐷Cadastro - Gera Senha🐷
 {% endblock titulo %}
+
+
+{% block conteudo %}
+
+<div class="container container_maior">
+    <h2>Vamos criar uma senha super segura para você! Preencha todos os campos e voilà, sua senha estará pronta para arrasar!</h2>
+</div>
+    {% if messages %}
+    <div class="messages">
+        <ul class="messages-list">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }} senha"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+    <form action="{% url 'gera_senha' %}" method="POST" class="form_gera_senha">
+        {% csrf_token %}
+        <input class="form_gera_senha--numero" type="number" name="numero" id="numero" placeholder="Quantidade de números!" min="1" max="99">
+        <input class="form_gera_senha--caracter" type="number" name="caracteres" id="caracteres" placeholder="Quantidade de caracteres!" min="1" max="99">
+        <input class="form_gera_senha--letra" type="number" name="letras" id="letras" placeholder="Quantidade de letras!" min="1" max="99">
+        <input class="form_gera_senha--botao" type="submit" value="Gerar Senha!">
+    </form>
+
+{% endblock conteudo %}

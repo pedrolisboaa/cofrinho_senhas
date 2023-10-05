@@ -10,15 +10,36 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-
-.cabecalho_main {
-    background-color: #3498db; /* Azul médio para o cabeçalho */
-    padding: 20px;
+li, ol, ul {
+    list-style: none;
 }
 
-.cabecalho_main h1 {
+.cabecalho_main {
+    background-color: #3498db; 
+    padding: 20px;
+    text-align: center;
+}
+
+
+.cabecalho_main h1,
+.cabecalho_main h2 {
+    display: inline-block; 
+    margin: 0;
     font-size: 24px;
-    color: #fff; /* Cor do texto do cabeçalho */
+    color: #fff;
+    text-decoration: none;
+}
+
+.cabecalho_main a {
+    margin: 0 15px; 
+    font-size: 20px; 
+    color: #fff; 
+    text-decoration: none; 
+    font-weight: bold; 
+    text-decoration: none;
+}
+.cabecalho_main a:hover {
+    background-color: #2187c4;
 }
 
 .main {
@@ -26,14 +47,18 @@ body {
 }
 
 .container {
-    background-color: #fff; /* Fundo branco para o container */
+    background-color: #fff; 
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    text-align: center; /* Centraliza o conteúdo dentro do container horizontalmente */
-    margin: 0 auto; /* Centraliza o container horizontalmente na página */
-    max-width: 400px; /* Define a largura máxima do container */
-    margin-top: 20px; /* Adiciona um espaço entre os containers */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+    margin: 0 auto; 
+    max-width: 400px; 
+    margin-top: 20px; 
+}
+
+.container_maior{
+    max-width: 550px;
 }
 
 .titulo_index {
@@ -107,4 +132,55 @@ body {
 
 .container p a:hover {
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estilo para o formulário de geração de senha */
+.form_gera_senha {
+    background-color: #fff; /* Fundo branco para o formulário */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 auto;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+.form_gera_senha h2 {
+    font-size: 24px;
+    color: #3498db;
+}
+
+.form_gera_senha--numero,
+.form_gera_senha--caracter,
+.form_gera_senha--letra {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+.form_gera_senha--botao {
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form_gera_senha--botao:hover {
+    background-color: #2187c4;
+}
+
+.senha {
+    font-size: 30px;
+    color: #4CAF50; 
+    font-weight: bold;
+    margin-top: 10px;
 }
