@@ -66,10 +66,20 @@ def login(request):
 
 @login_required(login_url='login')
 def plataforma(request):
+
+    if request.method == 'POST':
+        usuario = request.user
+        site = request.POST['site']
+        senha = request.POST['senha']
+
+        cofre = Cofre(usuario=usuario, site=site, senha=senha)
+        cofre.save()
+    
     dados_do_usuario = Cofre.objects.filter(usuario=request.user)
     
     contexto = {
         'dados_do_usuario': dados_do_usuario,
+        'nome': request.user,
     }
     return render(request, 'plataforma.html', contexto)
 

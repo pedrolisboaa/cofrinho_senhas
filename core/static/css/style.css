@@ -184,3 +184,24 @@ li, ol, ul {
     font-weight: bold;
     margin-top: 10px;
 }
+
+/* Estilo para o ícone de olho */
+.password-toggle {
+    cursor: pointer;
+    position: absolute;
+    top: 75%; /* Ajuste a posição vertical */
+    right: 475px;
+    transform: translateY(-50%);
+    color: #3498db; /* Cor do ícone */
+    font-size: 18px;
+}
+
+/* Estilo para o ícone de olho quando a senha é visível */
+.password-toggle.visible {
+    color: #4CAF50; /* Cor do ícone quando a senha é visível */
+}
+
+#senha.visible {
+    background-color: rgba(76, 175, 80, 0.1); /* Cor de fundo quando a senha é visível */
+    border: 1px solid #4CAF50; /* Cor da borda quando a senha é visível */
+}

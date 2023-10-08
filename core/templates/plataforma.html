@@ -6,8 +6,20 @@
 
 {% block conteudo %}
 
-    <h1>Estou logado na plataforma.</h1>
+    <h1>Olá {{nome}}</h1>
 
+    <div class="container">
+        <form action="{% url 'plataforma' %}" method="POST" class="formulario">
+            {% csrf_token %}
+            <input type="text" placeholder="Informe o site" name="site" id="site">
+            <input type="password" placeholder="Senha" name="senha" id="senha">
+            <input type="submit" value="cadastrar">
+        </form>
+    </div>
+
+   
+  
+    <h2>Suas senhas!</h2>
     <ul>
         {% for dado in dados_do_usuario %}
             <li>Site: {{dado.site}} - Senha: {{dado.senha}}</li>
